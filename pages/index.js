@@ -14,7 +14,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Ne dors pas Amlie je suis la <code>Miss TOULOUSE</code>
         </p>
 
         <div className="grid">
