@@ -1,5 +1,5 @@
 
-import {data} from './PortfolioData'
+import {data} from '../public/PortfolioData'
 export default function Portfolio() {
 	return (
 		<div id="wrapper">

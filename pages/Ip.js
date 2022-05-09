@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { data } from './PortfolioData'
+import { data } from '../public/PortfolioData'
 import { useState, useEffect } from 'react';
 
 
