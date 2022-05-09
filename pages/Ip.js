@@ -36,11 +36,14 @@ export default function IP() {
             setvalidationIpV4(false);
         }
 
-     
-       
-        
+   
+
+
+        //console.log(binaireIPV41.length);
+
+
     }
-    
+
     const checkCIDR = (e) => {
 
         const checkCIDR = new RegExp(/\b([0-9]|[12][0-9]|3[0-2])\b/g);
@@ -49,7 +52,7 @@ export default function IP() {
 
         setvalidationCIDR(checkCIDR.test(e.target.value));
 
-        
+
 
     }
     useEffect(() => {
@@ -75,29 +78,67 @@ export default function IP() {
         arrayDecimalCIDR[2] = parseInt(arrayBinaireCIDR[2], 2);
         arrayDecimalCIDR[3] = parseInt(arrayBinaireCIDR[3], 2);
 
-        
-       
-        
-        
+
+
+
 
         //arrayBinaireIpV4 = [];
         const test = ipV4.split('.')
         test.map((binIpV4) => {
-
             arrayBinaireIpV4.push([parseInt(binIpV4).toString(2)]);
-            
 
         })
 
-        for (let index = 0; index < arrayBinaireIpV4.length; index++) {
-            console.log(arrayBinaireIpV4[1])
+        arrayBinaireIpV4.map((binIpV4, index) => {
 
-            for (let index = 0; index < arrayBinaireIpV4[1].length; index++) {
-                console.log(arrayBinaireIpV4)
-                
+            if (binIpV4[0].length < 8 && index == 0) {
+                let number = 8 - binIpV4[0].length
+                for (let index = 0; index < number ; index++) {
+                    binIpV4[0] = "0" + binIpV4[0]
+                }
+
             }
-            
-        }
+            if (binIpV4[0].length < 8 && index == 1) {
+                let number = 8 - binIpV4[0].length
+                for (let index = 0; index < number; index++) {
+                    binIpV4[0] = "0" + binIpV4[0]
+                }
+
+            }
+            if (binIpV4[0].length < 8 && index == 2) {
+                let number = 8 - binIpV4[0].length
+                for (let index = 0; index < number ; index++) {
+                    binIpV4[0] = "0" + binIpV4[0]
+                }
+            }
+            if (binIpV4[0].length < 8 && index == 3) {
+                let number = 8 - binIpV4[0].length
+
+                for (let index = 0; index < number ; index++) {
+                    binIpV4[0] = "0" + binIpV4[0]
+                }
+
+            }
+            setBinaireIPV41(arrayBinaireIpV4[0])
+            setBinaireIPV42(arrayBinaireIpV4[1])
+            setBinaireIPV43(arrayBinaireIpV4[2])
+            setBinaireIPV44(arrayBinaireIpV4[3])
+
+
+
+        })
+
+
+        /*
+                for (let index = 0; index < arrayBinaireIpV4.length; index++) {
+                    console.log(arrayBinaireIpV4[1])
+        
+                    for (let index = 0; index < arrayBinaireIpV4[1].length; index++) {
+                        console.log(arrayBinaireIpV4)
+        
+                    }
+        
+                }*/
     });
 
 
@@ -113,7 +154,7 @@ export default function IP() {
 
         })
 
-      
+
 
 
 
@@ -194,7 +235,7 @@ export default function IP() {
                         <tbody>
                             <tr className='text-center'>
 
-                                <td> {parseInt(binaireIPV41, 10)}.{parseInt(binaireIPV42, 10)}.{parseInt(binaireIPV43, 10)}.{parseInt(binaireIPV44, 10)}</td>
+                                <td> {binaireIPV41}.{binaireIPV42}.{binaireIPV43}.{binaireIPV44}</td>
                                 <td>/{CIDR}</td>
                                 <td ></td>
                                 <td></td>
