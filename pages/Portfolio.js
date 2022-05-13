@@ -11,9 +11,9 @@ export default function Portfolio() {
 			{data.map((speaker) => {
 				const { id, color, title, last, favorite, twitterHandle, company, session, } = speaker;
 				return (
-					<div className='col-lg-4 col-xm-12 col-sm-12 '>
+					<div className='col-lg-4 col-xm-12 col-sm-12 ' key={id}>
 
-						<article className={"  style" + color} key={id}>
+						<article className={"  style" + color} >
 							<span className="image">
 								<img src="images/pic02.jpg" alt="" />
 							</span>

@@ -5,7 +5,7 @@ export const data = [
     title: "Ip",
     img: "pic02.jpg",
     text: "Calcul de ton réseau."
-  },
+  }/*,
   {
     id: "2",
     color:"2",
@@ -33,5 +33,5 @@ export const data = [
     title: "Titre4",
     img: "pic02.jpg",
     text: "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
-  }
+  }*/
 ];

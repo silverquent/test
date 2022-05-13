@@ -58,7 +58,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 
 				<title>Mon site Portfolio</title>
-				<meta charset="utf-8" />
+				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 			</Head>

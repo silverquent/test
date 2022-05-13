@@ -162,16 +162,11 @@ export default function IP() {
 
     }
 
-    const pepito = binaireIPV41 + binaireIPV42 + binaireIPV43 + binaireIPV44;
-    const str = 'Mozilla';
+    // const pepito = binaireIPV41 + binaireIPV42 + binaireIPV43 + binaireIPV44;
 
-console.log(str.substring(1, 3));
-// expected output: "oz"
 
-console.log(str.substring(2));
-// expected output: "zilla"
-    console.log(pepito.toString().substring(CIDR));
-    
+    // console.log(pepito.toString().substring(CIDR));
+
     return (
         <div>
             <Head>
@@ -181,13 +176,13 @@ console.log(str.substring(2));
             </Head>
 
 
-            <div class="d-flex justify-content-end">
+            <div className="d-flex justify-content-end">
                 <nav aria-label="breadcrumb pe-2">
-                    <ol class="breadcrumb">
+                    <ol className="breadcrumb">
                         <Link href={"/"}>
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li className="breadcrumb-item"><a href="#">Home</a></li>
                         </Link>
-                        <li class="breadcrumb-item active" aria-current="page">Ipv4</li>
+                        <li className="breadcrumb-item active" aria-current="page">Ipv4</li>
                     </ol>
                 </nav>
             </div>
@@ -203,19 +198,19 @@ console.log(str.substring(2));
                     <div className="col-md-6">
                         <label forhtml="inputEmail4" className="form-label">Ip v4</label>
                         <input type="text" className="form-control" id="inputEmail4" placeholder={ipV4} onChange={checkIp} />
-                        <div id="emailHelp" class={"form-text " + (validationIpV4 == true ? 'text-success' : 'text-danger')}>
+                        <div id="emailHelp" className={"form-text " + (validationIpV4 == true ? 'text-success' : 'text-danger')}>
                             {(validationIpV4 == true ? "le format de l'adresse est  valide" : "le format de l'adresse n'est pas valide")}
                         </div>
                     </div>
                     <div className="col-md-6">
                         <label forhtml="inputPassword4" className="form-label">CIDR (Classless Inter-Domain Routing)</label>
                         <input type="number" min="0" className="form-control" id="inputPassword4" placeholder={CIDR} onChange={checkCIDR} />
-                        <div id="emailHelp" class={"form-text " + (validatiONCIDR == true ? 'text-success' : 'text-danger')}>
+                        <div id="emailHelp" className={"form-text " + (validatiONCIDR == true ? 'text-success' : 'text-danger')}>
                             {(validatiONCIDR == true ? "le format du " + validatiONCIDR + "CIDR est  valide" : "le format du CIDR n'est pas valide")}
                         </div>
                     </div>
                     <div className="col-12">
-                        <button type="submit" class={"btn btn-primary " + (validatiONCIDR && validationIpV4 == true ? '' : 'disabled')}  >Envoyer</button>
+                        <button type="submit" className={"btn btn-primary " + (validatiONCIDR && validationIpV4 == true ? '' : 'disabled')}  >Envoyer</button>
                     </div>
                 </form>
 
