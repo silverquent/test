@@ -1,3 +1,5 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
 /*
 	Phantom by HTML5 UP
@@ -1780,9 +1782,7 @@ input, select, textarea {
 
 /* Section/Article */
 
-	section.special, article.special {
-		text-align: center;
-	}
+	
 
 	header p {
 		margin-top: -1em;
@@ -2561,18 +2561,7 @@ input, select, textarea {
 
 /* Tiles */
 
-	.tiles {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		postiion: relative;
-		margin: -2.5em 0 0 -2.5em;
-	}
+	
 
 		.tiles article {
 			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;

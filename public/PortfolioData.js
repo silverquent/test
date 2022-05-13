@@ -2,9 +2,9 @@ export const data = [
   {
     id: "1",
     color:"1",
-    title: "Arun",
+    title: "Ip",
     img: "pic02.jpg",
-    text: "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
+    text: "Calcul de ton réseau."
   },
   {
     id: "2",

@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { data } from '../public/PortfolioData'
+import Link from 'next/link'
+
 import { useState, useEffect } from 'react';
 
 
@@ -36,7 +37,7 @@ export default function IP() {
             setvalidationIpV4(false);
         }
 
-   
+
 
 
         //console.log(binaireIPV41.length);
@@ -93,7 +94,7 @@ export default function IP() {
 
             if (binIpV4[0].length < 8 && index == 0) {
                 let number = 8 - binIpV4[0].length
-                for (let index = 0; index < number ; index++) {
+                for (let index = 0; index < number; index++) {
                     binIpV4[0] = "0" + binIpV4[0]
                 }
 
@@ -107,14 +108,14 @@ export default function IP() {
             }
             if (binIpV4[0].length < 8 && index == 2) {
                 let number = 8 - binIpV4[0].length
-                for (let index = 0; index < number ; index++) {
+                for (let index = 0; index < number; index++) {
                     binIpV4[0] = "0" + binIpV4[0]
                 }
             }
             if (binIpV4[0].length < 8 && index == 3) {
                 let number = 8 - binIpV4[0].length
 
-                for (let index = 0; index < number ; index++) {
+                for (let index = 0; index < number; index++) {
                     binIpV4[0] = "0" + binIpV4[0]
                 }
 
@@ -123,6 +124,7 @@ export default function IP() {
             setBinaireIPV42(arrayBinaireIpV4[1])
             setBinaireIPV43(arrayBinaireIpV4[2])
             setBinaireIPV44(arrayBinaireIpV4[3])
+
 
 
 
@@ -139,7 +141,7 @@ export default function IP() {
                     }
         
                 }*/
-    });
+    }, [ipV4, CIDR]);
 
 
     const submitFormIpV4 = (e) => {
@@ -160,7 +162,16 @@ export default function IP() {
 
     }
 
+    const pepito = binaireIPV41 + binaireIPV42 + binaireIPV43 + binaireIPV44;
+    const str = 'Mozilla';
 
+console.log(str.substring(1, 3));
+// expected output: "oz"
+
+console.log(str.substring(2));
+// expected output: "zilla"
+    console.log(pepito.toString().substring(CIDR));
+    
     return (
         <div>
             <Head>
@@ -168,6 +179,19 @@ export default function IP() {
                 <link rel="icon" href="/favicon.ico" />
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
             </Head>
+
+
+            <div class="d-flex justify-content-end">
+                <nav aria-label="breadcrumb pe-2">
+                    <ol class="breadcrumb">
+                        <Link href={"/"}>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        </Link>
+                        <li class="breadcrumb-item active" aria-current="page">Ipv4</li>
+                    </ol>
+                </nav>
+            </div>
+
             <div className='container'>
                 <div className="container-fluid py-5">
                     <h1 className="display-5 fw-bold">Custom jumbotron</h1>
